@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hospital & Diagnostic Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="Images/Smart-hospital-logo.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#0369a1',
+                        accent: '#22d3ee',
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-slate-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10  rounded-full flex items-center justify-center">
+                        <img src="Images/Smart-hospital-logo.png" alt="Smart-hospital-logo">
+                    </div>
+                    <span class="text-xl font-bold text-dark">Smart Hospital</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-dark hover:text-primary transition duration-300">Home</a>
+                    <a href="services.html" class="text-dark hover:text-primary transition duration-300">Services</a>
+                    <a href="doctors.html" class="text-dark hover:text-primary transition duration-300">Doctors</a>
+                    <a href="blogs.html" class="text-dark hover:text-primary transition duration-300">Blogs</a>
+                    <a href="about.html" class="text-dark hover:text-primary transition duration-300">About Us</a>
+                    <a href="contact.html" class="text-dark hover:text-primary transition duration-300">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-dark hover:text-primary transition duration-300">Home</a>
+                <a href="services.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Services</a>
+                <a href="doctors.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Doctors</a>
+                <a href="blogs.html" class="block py-2 text-dark hover:text-primary transition duration-300">Blogs</a>
+                <a href="about.html" class="block py-2 text-dark hover:text-primary transition duration-300">About
+                    Us</a>
+                <a href="contact.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="bg-primary text-white py-20">
+        <div class="container mx-auto px-4 text-center animate-on-scroll" data-translate="translateY(20px)">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Diagnostic Services</h1>
+            <p class="text-xl max-w-2xl mx-auto">Comprehensive healthcare diagnostics with advanced
+                technology and expert care.</p>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-on-scroll" data-translate="translateY(20px)">
+                <h2 class="text-3xl font-bold text-dark mb-4">Diagnostic Services</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto">We offer a wide range of diagnostic services to accurately
+                    assess your health needs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        alt="Blood Test" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-vial text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark">Blood Tests</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Comprehensive blood analysis including complete blood
+                            count (CBC), lipid profile, glucose levels, liver function tests, and more.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Fasting required for some tests</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Results in 24-48 hours</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Home collection available</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="text-primary font-semibold hover:text-secondary transition duration-300 inline-flex items-center">
+                            Book Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        alt="Ultrasound" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-ultrasound text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark">Ultrasound</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Non-invasive imaging using sound waves to examine
+                            internal organs, blood flow, and developing fetuses during pregnancy.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Abdominal and pelvic scans</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Doppler studies for blood flow</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Obstetric ultrasound</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="text-primary font-semibold hover:text-secondary transition duration-300 inline-flex items-center">
+                            Book Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        alt="X-Ray" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-x-ray text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark">X-Ray</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Digital X-ray imaging for bones, chest, abdomen, and
+                            other areas with minimal radiation exposure and quick results.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Digital imaging for better clarity</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Low radiation dose</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Immediate results for emergencies</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="text-primary font-semibold hover:text-secondary transition duration-300 inline-flex items-center">
+                            Book Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <img src="Images/Comming-soon-smart-hospital.jpeg"
+                        alt="MRI Scan" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-procedures text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark">MRI Scan</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">High-resolution magnetic resonance imaging for
+                            detailed examination of organs, tissues, and skeletal system without radiation.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>3 Tesla machine for high resolution</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Contrast and non-contrast options</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Specialized cardiac and neuro MRI</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="text-primary font-semibold hover:text-secondary transition duration-300 inline-flex items-center">
+                            Book Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <img src="https://images.unsplash.com/photo-1551601651-bc60f254d532?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        alt="ECG" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-heartbeat text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark">ECG</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Electrocardiogram tests to monitor heart health,
+                            detect arrhythmias, and assess overall cardiac function.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Resting and stress ECG</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Holter monitoring available</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Immediate interpretation</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="text-primary font-semibold hover:text-secondary transition duration-300 inline-flex items-center">
+                            Book Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <img src="Images/Comming-soon-smart-hospital.jpeg"
+                        alt="CT Scan" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-brain text-primary text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark">CT Scan</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Computed tomography scans providing cross-sectional
+                            images of the body for detailed diagnostic information.</p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>64-slice CT scanner</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Low-dose protocols available</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                                <span>Angiography and 3D reconstruction</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html"
+                            class="text-primary font-semibold hover:text-secondary transition duration-300 inline-flex items-center">
+                            Book Now <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-on-scroll" data-translate="translateY(20px)">
+                <h2 class="text-3xl font-bold text-dark mb-4">Specialized Tests</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="max-w-3xl mx-auto">We also offer these specialized diagnostic services.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <div class="flex items-center mb-3">
+                        <div class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-dna text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark">Genetic Testing</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">DNA analysis for hereditary conditions and personalized
+                        medicine.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <div class="flex items-center mb-3">
+                        <div class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-allergies text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark">Allergy Testing</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Identify allergens through skin prick or blood tests.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <div class="flex items-center mb-3">
+                        <div class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-microscope text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark">Microbiology Tests</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Culture and sensitivity tests for infections.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <div class="flex items-center mb-3">
+                        <div class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-virus text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark">COVID-19 Testing</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">RT-PCR and rapid antigen tests with quick results.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <div class="flex items-center mb-3">
+                        <div class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-notes-medical text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark">Thyroid Panel</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Comprehensive thyroid function assessment.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <div class="flex items-center mb-3">
+                        <div class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-vial text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark">Hormone Tests</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Evaluation of endocrine system function.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <div class="flex items-center mb-3">
+                        <div class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-utensils text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark">Nutritional Tests</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Vitamin and mineral deficiency analysis.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <div class="flex items-center mb-3">
+                        <div class="bg-primary/10 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-lungs text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark">Pulmonary Tests</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Lung function and respiratory assessments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-secondary text-white">
+        <div class="container mx-auto px-4 text-center animate-on-scroll" data-translate="translateY(20px)">
+            <h2 class="text-3xl font-bold mb-6">Need Help Choosing the Right Test?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Our medical experts can guide you to the most
+                appropriate diagnostic services for your needs.</p>
+            <a href="contact.html"
+                class="bg-white hover:bg-gray-100 text-secondary font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Contact
+                Our Specialists</a>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- About Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">About Us</h3>
+                    <p class="mb-4">Smart Hospital & Diagnostic Center is committed to providing high-quality healthcare
+                        services with state-of-the-art technology and compassionate care.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-accent transition duration-300">Services</a></li>
+                        <li><a href="doctors.html" class="hover:text-accent transition duration-300">Doctors</a></li>
+                        <li><a href="blogs.html" class="hover:text-accent transition duration-300">Blogs</a></li>
+                        <li><a href="about.html" class="hover:text-accent transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">Our Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent transition duration-300">Blood Tests</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">MRI Scan</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">X-Ray</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">Ultrasound</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">ECG</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">CT Scan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">Contact Us</h3>
+                    <address class="not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-accent"></i>84V3+J9F, Shaheed Muktijoddha Road, Shyamnagar</p>
+                        <p class="mb-2"><i class="fas fa-phone-alt mr-2 text-accent"></i> +88 01815-505050</p>
+                        <p class="mb-2"><i class="fas fa-envelope mr-2 text-accent"></i> info@smarthospitalbd.com</p>
+                        <p><i class="fas fa-clock mr-2 text-accent"></i> Mon-Sun: 8:00 AM - 8:00 PM</p>
+                    </address>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center animate-on-scroll"
+                data-translate="translateY(20px)">
+                <p>&copy; 2023 Smart Hospital & Diagnostic Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Scroll animation
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementPosition < windowHeight - 100) {
+                    const translate = element.getAttribute('data-translate') || 'translateY(0)';
+                    element.style.transform = translate;
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+        // Initialize animations on load
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+
+</html>

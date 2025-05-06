@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hospital & Diagnostic Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/png" href="Images/Smart-hospital-logo.png" />
+    <meta name="description" content=" Smart Hospital & Diagnostic Center – Delivering trusted, quality healthcare and diagnostics with care, compassion, and modern medical expertise.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#0369a1',
+                        accent: '#22d3ee',
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-slate-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center">
+                        <img src="Images/Smart-hospital-logo.png" alt="Smart-hospital-logo">
+                    </div>
+                    <span class="text-xl font-bold text-dark">Smart Hospital</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-dark hover:text-primary transition duration-300">Home</a>
+                    <a href="services.html" class="text-dark hover:text-primary transition duration-300">Services</a>
+                    <a href="doctors.html" class="text-dark hover:text-primary transition duration-300">Doctors</a>
+                    <a href="blogs.html" class="text-dark hover:text-primary transition duration-300">Blogs</a>
+                    <a href="about.html" class="text-dark hover:text-primary transition duration-300">About Us</a>
+                    <a href="contact.html" class="text-dark hover:text-primary transition duration-300">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-dark hover:text-primary transition duration-300">Home</a>
+                <a href="services.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Services</a>
+                <a href="doctors.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Doctors</a>
+                <a href="blogs.html" class="block py-2 text-dark hover:text-primary transition duration-300">Blogs</a>
+                <a href="about.html" class="block py-2 text-dark hover:text-primary transition duration-300">About
+                    Us</a>
+                <a href="contact.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="bg-primary text-white py-20">
+            <div class="container mx-auto px-4 text-center animate-on-scroll" data-translate="translateY(20px)">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">About Smart Hospital & Diagnostic Center</h1>
+                <p class="text-xl max-w-2xl mx-auto">Committed to excellence in diagnostic healthcare since
+                    2005.</p>
+            </div>
+        </section>
+
+        <!-- About Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="animate-on-scroll" data-translate="translateY(20px)">
+                        <h2 class="text-3xl font-bold text-dark mb-6">Our Story</h2>
+                        <div class="w-20 h-1 bg-primary mb-6"></div>
+                        <p class="text-gray-600 mb-4">Founded in 2005 by Dr. Robert Smith, Smart Hospital &
+                            Diagnostic Center began as a small imaging center with a vision to provide accurate,
+                            timely, and compassionate diagnostic services to our community.</p>
+                        <p class="text-gray-600 mb-4">Over the years, we've grown into a comprehensive
+                            diagnostic facility with state-of-the-art technology and a team of highly skilled
+                            specialists. Our commitment to patient care and diagnostic excellence has remained
+                            unchanged.</p>
+                        <p class="text-gray-600">Today, we serve thousands of patients annually, partnering with
+                            healthcare providers across the region to deliver precise diagnostic information
+                            that forms the foundation of effective treatment plans.</p>
+                    </div>
+                    <div class="animate-on-scroll" data-translate="translateY(20px)">
+                        <img src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Our Facility" class="rounded-lg shadow-xl w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission/Vision -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Mission -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-bullseye text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4">Our Mission</h3>
+                        <p class="text-gray-600">To provide accurate, timely, and comprehensive diagnostic
+                            services using advanced technology, delivered with compassion and respect for every
+                            patient. We aim to be the trusted partner of both patients and physicians in the
+                            diagnostic process.</p>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-eye text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-dark mb-4">Our Vision</h3>
+                        <p class="text-gray-600">To be recognized as the region's premier diagnostic center,
+                            setting the standard for excellence in diagnostic accuracy, patient experience, and
+                            innovative healthcare solutions. We strive to continually expand our services while
+                            maintaining the highest quality standards.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 animate-on-scroll" data-translate="translateY(20px)">
+                    <h2 class="text-3xl font-bold text-dark mb-4">Our Core Values</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                    <p class="max-w-3xl mx-auto">These principles guide everything we do at Smart Hospital &
+                        Diagnostic Center.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-heart text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark mb-2">Compassion</h3>
+                        <p class="text-gray-600 text-sm">We treat every patient with empathy, kindness, and
+                            respect, understanding that diagnostic tests can be stressful.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-check-circle text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark mb-2">Accuracy</h3>
+                        <p class="text-gray-600 text-sm">We maintain the highest standards of precision in all
+                            our tests and interpretations, knowing lives depend on it.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-flask text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark mb-2">Innovation</h3>
+                        <p class="text-gray-600 text-sm">We continually invest in advanced technology and
+                            training to provide cutting-edge diagnostic services.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-users text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark mb-2">Teamwork</h3>
+                        <p class="text-gray-600 text-sm">We collaborate across specialties to provide
+                            comprehensive diagnostic insights for better patient outcomes.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-clock text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark mb-2">Timeliness</h3>
+                        <p class="text-gray-600 text-sm">We understand the urgency of diagnostic results and
+                            strive to deliver them as quickly as possible without compromising accuracy.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark mb-2">Safety</h3>
+                        <p class="text-gray-600 text-sm">We maintain rigorous safety protocols to protect our
+                            patients, staff, and community.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-hand-holding-heart text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark mb-2">Patient-Centered Care</h3>
+                        <p class="text-gray-600 text-sm">We tailor our services to meet individual patient
+                            needs, ensuring comfort and understanding throughout the diagnostic process.</p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-balance-scale text-primary"></i>
+                        </div>
+                        <h3 class="font-bold text-dark mb-2">Integrity</h3>
+                        <p class="text-gray-600 text-sm">We adhere to the highest ethical standards in all our
+                            interactions and business practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 animate-on-scroll" data-translate="translateY(20px)">
+                    <h2 class="text-3xl font-bold text-dark mb-4">What Our Patients Say</h2>
+                    <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                    <p class="max-w-3xl mx-auto">Hear from people who have experienced our services firsthand.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                    alt="Patient" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark">Sarah Miller</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"The staff at Smart Hospital made my MRI experience so
+                            comfortable. They explained everything clearly and the results were available
+                            quickly. My doctor was impressed with the quality of the images."</p>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                    alt="Patient" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark">David Thompson</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"As someone who needs regular blood work, I appreciate
+                            the efficiency and accuracy of Smart Hospital. The phlebotomists are skilled and the
+                            facility is always clean. Results are consistently available within 24 hours."</p>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                        data-translate="translateY(20px)">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                    alt="Patient" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark">Jennifer Lee</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"The cardiology tests I had at Smart Hospital were
+                            thorough and the staff was incredibly professional. Dr. Rodriguez took time to
+                            explain my ECG results in detail. I highly recommend their cardiac diagnostics."</p>
+                    </div>
+                </div>
+
+                <!-- More testimonials button -->
+                <div class="text-center mt-10 animate-on-scroll" data-translate="translateY(20px)">
+                    <a href="#"
+                        class="inline-flex items-center text-primary font-semibold hover:text-secondary transition duration-300">
+                        Read more testimonials <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section class="py-16 bg-primary text-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12 animate-on-scroll" data-translate="translateY(20px)">
+                    <h2 class="text-3xl font-bold mb-4">Our Achievements</h2>
+                    <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                    <p class="max-w-3xl mx-auto">Recognized for excellence in diagnostic healthcare services.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center animate-on-scroll" data-translate="translateY(20px)">
+                        <div class="text-4xl font-bold mb-2">15,000+</div>
+                        <p>Tests Performed Annually</p>
+                    </div>
+                    <div class="text-center animate-on-scroll" data-translate="translateY(20px)">
+                        <div class="text-4xl font-bold mb-2">98%</div>
+                        <p>Patient Satisfaction Rate</p>
+                    </div>
+                    <div class="text-center animate-on-scroll" data-translate="translateY(20px)">
+                        <div class="text-4xl font-bold mb-2">50+</div>
+                        <p>Healthcare Partnerships</p>
+                    </div>
+                    <div class="text-center animate-on-scroll" data-translate="translateY(20px)">
+                        <div class="text-4xl font-bold mb-2">12</div>
+                        <p>Industry Awards</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4 text-center animate-on-scroll" data-translate="translateY(20px)">
+                <h2 class="text-3xl font-bold mb-6">Experience the Smart Hospital Difference</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Schedule your diagnostic tests with us today and
+                    benefit from our expertise, advanced technology, and compassionate care.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="contact.html"
+                        class="bg-primary hover:bg-secondary text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Book
+                        an Appointment</a>
+                    <a href="tel:+11234567890"
+                        class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Us Now
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- About Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">About Us</h3>
+                    <p class="mb-4">Smart Hospital & Diagnostic Center is committed to providing high-quality healthcare
+                        services with state-of-the-art technology and compassionate care.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-accent transition duration-300">Services</a></li>
+                        <li><a href="doctors.html" class="hover:text-accent transition duration-300">Doctors</a></li>
+                        <li><a href="blogs.html" class="hover:text-accent transition duration-300">Blogs</a></li>
+                        <li><a href="about.html" class="hover:text-accent transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">Our Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent transition duration-300">Blood Tests</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">MRI Scan</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">X-Ray</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">Ultrasound</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">ECG</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">CT Scan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">Contact Us</h3>
+                    <address class="not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-accent"></i>84V3+J9F, Shaheed Muktijoddha Road, Shyamnagar</p>
+                        <p class="mb-2"><i class="fas fa-phone-alt mr-2 text-accent"></i> +88 01815-505050</p>
+                        <p class="mb-2"><i class="fas fa-envelope mr-2 text-accent"></i> info@smarthospitalbd.com</p>
+                        <p><i class="fas fa-clock mr-2 text-accent"></i> Mon-Sun: 8:00 AM - 8:00 PM</p>
+                    </address>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center animate-on-scroll"
+                data-translate="translateY(20px)">
+                <p>&copy; 2023 Smart Hospital & Diagnostic Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Scroll animation
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementPosition < windowHeight - 100) {
+                    const translate = element.getAttribute('data-translate') || 'translateY(0)';
+                    element.style.transform = translate;
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+        // Initialize animations on load
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+
+</html>

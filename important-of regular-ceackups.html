@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hospital & Diagnostic Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="script.js"></script> -->
+    <link rel="icon" type="image/png" href="Images/Smart-hospital-logo.png" />
+    <meta name="description" content=" Smart Hospital & Diagnostic Center – Delivering trusted, quality healthcare and diagnostics with care, compassion, and modern medical expertise.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#0369a1',
+                        accent: '#22d3ee',
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-slate-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center">
+                        <img src="Images/Smart-hospital-logo.png" alt="Smart-hospital-logo">
+                    </div>
+                    <span class="text-xl font-bold text-dark">Smart Hospital</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-dark hover:text-primary transition duration-300">Home</a>
+                    <a href="services.html" class="text-dark hover:text-primary transition duration-300">Services</a>
+                    <a href="doctors.html" class="text-dark hover:text-primary transition duration-300">Doctors</a>
+                    <a href="blogs.html" class="text-dark hover:text-primary transition duration-300">Blogs</a>
+                    <a href="about.html" class="text-dark hover:text-primary transition duration-300">About Us</a>
+                    <a href="contact.html" class="text-dark hover:text-primary transition duration-300">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-dark hover:text-primary transition duration-300">Home</a>
+                <a href="services.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Services</a>
+                <a href="doctors.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Doctors</a>
+                <a href="blogs.html" class="block py-2 text-dark hover:text-primary transition duration-300">Blogs</a>
+                <a href="about.html" class="block py-2 text-dark hover:text-primary transition duration-300">About
+                    Us</a>
+                <a href="contact.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Blog Post Header -->
+        <section class="bg-primary text-white py-20">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="mb-4">
+                        <a href="blogs.html"
+                            class="text-white hover:text-accent transition duration-300 inline-flex items-center">
+                            <i class="fas fa-arrow-left mr-2"></i> Back to Blogs
+                        </a>
+                    </div>
+                    <h1 id="blog-title" class="text-3xl md:text-4xl font-bold mb-4">The Importance of Regular Health Checkups</h1>
+                    <div class="flex items-center text-sm">
+                        <span id="blog-date" class="mr-4">April 22, 2025</span>
+                        <span id="blog-author" class="font-medium">Dr. Sarah Johnson</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <img id="blog-image"
+                        src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        alt="Blog Image" class="w-full h-64 md:h-80 object-cover rounded-lg mb-8">
+
+                    <div id="blog-content" class="blog-content">
+                        <h3 class="font-bold text-4xl">What Are Regular Health Checkups?</h3>
+                        <br>
+                        <p class="text-dark">Regular health checkups, also known as preventive health screenings, are routine visits to a healthcare provider to assess your overall health. These checkups typically include:</p>
+                        <li>lood tests (cholesterol, blood sugar, etc.)</li>
+                        <li>Blood pressure measurement</li>
+                        <li>Physical examinations</li>
+                        <li>Weight and BMI assessments</li>
+                        <li>Screening for certain cancers (depending on age and risk factors)</li>
+                        <li>Discussions about lifestyle, diet, and exercise</li>
+                        <p>The goal is early detection and prevention of potential health issues before they become serious.</p>
+                        <br>
+                        <br>
+                        <h3 class="font-semibold">Why Are They Important?</h3>
+                        <br>
+                        <p class="font-semibold">1. Early Detection Saves Lives</p>
+                        <p>Many serious health conditions—such as heart disease, diabetes, and cancer—develop gradually. Regular screenings can catch these diseases in their early stages when they’re easier and more effective to treat.</p>
+                        <br>
+                        <h3 class="font-semibold">2. Helps Manage Existing Conditions</h3>
+                        <p>If you already have a chronic illness, such as hypertension or diabetes, regular checkups help monitor and manage the condition. Adjustments in medication, lifestyle recommendations, and timely interventions can improve your quality of life.</p>
+                        <br>
+                        <h3 class="font-semibold">3. Improves Long-Term Health</h3>
+                        <p>Preventive care helps avoid complications and hospitalizations. It also keeps your immune system strong and your body functioning at its best.</p>
+                        <br>
+                        <h3 class="font-semibold">4. Saves Money in the Long Run</h3>
+                        <p>Treating a disease in its advanced stage can be costly. Preventive care, on the other hand, is generally less expensive and helps avoid the high costs of emergency care or hospital stays.</p>
+                        <br>
+                        <h3 class="font-semibold">5. Boosts Mental Health</h3>
+                        <p>Mental health is just as important as physical health. A regular checkup gives you a chance to talk about stress, anxiety, or other concerns. Your doctor can guide you toward the right support or treatment.</p>
+                        <br>
+                        <br>
+                        <h2 class="font-bold text-3xl">How Often Should You Go?</h2>
+                        <p>The frequency of checkups depends on your age, gender, family history, and personal health. As a general guideline:</p>
+                        <li>Adults under 40: Every 2-3 years if healthy</li>
+                        <li>Adults 40+: Annually, or as advised by your doctor</li>
+                        <li>People with chronic conditions: As recommended by your healthcare provider</li>
+                        <p>Always consult your doctor to create a schedule that suits your needs.</p>
+                        <br>
+                        <br>
+                        <h2 class="font-bold text-3xl">Final Thoughts</h2>
+                        <p>Your health is your greatest asset. Don’t wait until something goes wrong to start caring for it. By investing a little time and effort into regular health checkups, you’re making a powerful commitment to a healthier, longer life.</p>
+                        <br>
+                        <p>Make your health a priority—schedule your next checkup today.</p>
+                    </div>
+
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <h3 class="text-xl font-bold mb-4">About the Author</h3>
+                        <div class="flex items-start">
+                            <div class="w-16 h-16 rounded-full overflow-hidden mr-4">
+                                <img id="author-image"
+                                    src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                    alt="Author" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 id="author-name" class="font-bold text-dark">Dr. Sarah Johnson</h4>
+                                <p id="author-bio" class="text-gray-600">Radiologist with 12 years of experience
+                                    specializing in diagnostic imaging interpretation including X-rays, CT scans, and
+                                    MRIs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Posts -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold text-dark mb-8 text-center">You Might Also Like</h2>
+
+                <div id="related-posts" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Related posts will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer same as previous pages -->
+
+        <!-- Blog Post JavaScript -->
+        <script>
+            // This would be replaced with actual content loading from your storage
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get blog ID from URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const blogId = urlParams.get('id');
+
+                // In a real implementation, you would fetch the blog post data here
+                // For this template, we'll use placeholder data
+
+                const blogData = {
+                    id: blogId || '1',
+                    title: "The Importance of Regular Health Checkups",
+                    date: "June 15, 2023",
+                    author: "Dr. Sarah Johnson",
+                    image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                    excerpt: "Discover why routine health screenings are crucial for early detection of potential health issues and maintaining overall wellness.",
+                    content: `
+                    <p>Regular health checkups are an essential part of maintaining good health and preventing serious medical conditions. Many people only visit their doctor when they're feeling sick, but preventive care through regular checkups can identify potential health issues before they become serious problems.</p>
+                    
+                    <h2>Early Detection Saves Lives</h2>
+                    <p>Many serious health conditions, including diabetes, high blood pressure, and even some cancers, often show no symptoms in their early stages. Regular screenings can detect these conditions early when they're most treatable.</p>
+                    
+                    <h3>Recommended Screenings by Age</h3>
+                    <ul>
+                        <li><strong>20s-30s:</strong> Blood pressure, cholesterol, skin cancer checks</li>
+                        <li><strong>40s:</strong> Diabetes screening, mammograms (for women), colon cancer screening</li>
+                        <li><strong>50s+:</strong> Bone density tests, prostate exams (for men), more frequent cancer screenings</li>
+                    </ul>
+                    
+                    <p>Your doctor can recommend a personalized screening schedule based on your family history and risk factors.</p>
+                `,
+                    authorImage: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+                    authorBio: "Radiologist with 12 years of experience specializing in diagnostic imaging interpretation including X-rays, CT scans, and MRIs."
+                };
+
+                // Populate the blog post
+                // document.getElementById('blog-title').textContent = blogData.title;
+                // document.getElementById('blog-date').textContent = blogData.date;
+                // document.getElementById('blog-author').textContent = blogData.author;
+                // document.getElementById('blog-image').src = blogData.image;
+                // document.getElementById('blog-image').alt = blogData.title;
+                // document.getElementById('blog-content').innerHTML = blogData.content;
+                // document.getElementById('author-image').src = blogData.authorImage;
+                // document.getElementById('author-name').textContent = blogData.author;
+                // document.getElementById('author-bio').textContent = blogData.authorBio;
+
+                // In a real implementation, you would load related posts from your data
+                const relatedPosts = [
+                    {
+                        id: '2',
+                        title: "Understanding Your Blood Test Results",
+                        date: "May 28, 2023",
+                        author: "Dr. Michael Chen",
+                        image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                        excerpt: "A comprehensive guide to interpreting common blood test markers and what they reveal about your health."
+                    },
+                    {
+                        id: '3',
+                        title: "What to Expect During an MRI Scan",
+                        date: "April 10, 2023",
+                        author: "Dr. David Rodriguez",
+                        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                        excerpt: "Demystifying the MRI process - preparation, procedure, and what different types of scans can detect."
+                    }
+                ];
+
+                const relatedContainer = document.getElementById('related-posts');
+                relatedPosts.forEach(post => {
+                    relatedContainer.innerHTML += `
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center text-sm text-gray-500 mb-3">
+                                <span>${post.date}</span>
+                                <span class="mx-2">•</span>
+                                <span>${post.author}</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-3">${post.title}</h3>
+                            <p class="text-gray-600 mb-4">${post.excerpt}</p>
+                            <a href="blog-template.html?id=${post.id}" class="text-primary font-semibold hover:text-secondary transition duration-300 inline-flex items-center">
+                                Read More <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                });
+            });
+        </script>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- About Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">About Us</h3>
+                    <p class="mb-4">Smart Hospital & Diagnostic Center is committed to providing high-quality healthcare
+                        services with state-of-the-art technology and compassionate care.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent transition duration-300">Home</a></li>
+                        <li><a href="services.html" class="hover:text-accent transition duration-300">Services</a></li>
+                        <li><a href="doctors.html" class="hover:text-accent transition duration-300">Doctors</a></li>
+                        <li><a href="blogs.html" class="hover:text-accent transition duration-300">Blogs</a></li>
+                        <li><a href="about.html" class="hover:text-accent transition duration-300">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">Our Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent transition duration-300">Blood Tests</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">MRI Scan</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">X-Ray</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">Ultrasound</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">ECG</a></li>
+                        <li><a href="#" class="hover:text-accent transition duration-300">CT Scan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="animate-on-scroll" data-translate="translateY(20px)">
+                    <h3 class="text-xl font-bold mb-4 text-primary">Contact Us</h3>
+                    <address class="not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-accent"></i>84V3+J9F, Shaheed Muktijoddha Road, Shyamnagar</p>
+                        <p class="mb-2"><i class="fas fa-phone-alt mr-2 text-accent"></i> +88 01815-505050</p>
+                        <p class="mb-2"><i class="fas fa-envelope mr-2 text-accent"></i> info@smarthospitalbd.com</p>
+                        <p><i class="fas fa-clock mr-2 text-accent"></i> Mon-Sun: 8:00 AM - 8:00 PM</p>
+                    </address>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center animate-on-scroll"
+                data-translate="translateY(20px)">
+                <p>&copy; 2023 Smart Hospital & Diagnostic Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Scroll animation
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementPosition < windowHeight - 100) {
+                    const translate = element.getAttribute('data-translate') || 'translateY(0)';
+                    element.style.transform = translate;
+                    element.classList.add('animated');
+                }
+            });
+        }
+
+        // Initialize animations on load
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+    </script>
+</body>
+
+</html>

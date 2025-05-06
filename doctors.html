@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Hospital & Diagnostic Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/png" href="Images/Smart-hospital-logo.png" />
+    <meta name="description" content=" Smart Hospital & Diagnostic Center – Delivering trusted, quality healthcare and diagnostics with care, compassion, and modern medical expertise.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#0369a1',
+                        accent: '#22d3ee',
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-slate-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <img src="Images/Smart-hospital-logo.png" alt="Smart-hospital-logo">
+                    </div>
+                    <span class="text-xl font-bold text-dark">Smart Hospital</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-dark hover:text-primary transition duration-300">Home</a>
+                    <a href="services.html" class="text-dark hover:text-primary transition duration-300">Services</a>
+                    <a href="doctors.html" class="text-dark hover:text-primary transition duration-300">Doctors</a>
+                    <a href="blogs.html" class="text-dark hover:text-primary transition duration-300">Blogs</a>
+                    <a href="about.html" class="text-dark hover:text-primary transition duration-300">About Us</a>
+                    <a href="contact.html" class="text-dark hover:text-primary transition duration-300">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 text-dark hover:text-primary transition duration-300">Home</a>
+                <a href="services.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Services</a>
+                <a href="doctors.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Doctors</a>
+                <a href="blogs.html" class="block py-2 text-dark hover:text-primary transition duration-300">Blogs</a>
+                <a href="about.html" class="block py-2 text-dark hover:text-primary transition duration-300">About
+                    Us</a>
+                <a href="contact.html"
+                    class="block py-2 text-dark hover:text-primary transition duration-300">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <main>
+            <!-- Page Header -->
+            <section class="bg-primary text-white py-20">
+                <div class="container mx-auto px-4 text-center animate-on-scroll" data-translate="translateY(20px)">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Specialist Doctors</h1>
+                    <p class="text-xl max-w-2xl mx-auto">Meet our team of experienced and compassionate healthcare
+                        professionals.</p>
+                </div>
+            </section>
+
+            <!-- Doctors List -->
+            <section class="py-16 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12 animate-on-scroll" data-translate="translateY(20px)">
+                        <h2 class="text-3xl font-bold text-dark mb-4">Our Medical Team</h2>
+                        <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                        <p class="max-w-3xl mx-auto">Highly qualified specialists dedicated to providing accurate
+                            diagnoses and personalized care.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Doctor 1 -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                            data-translate="translateY(20px)">
+                            <img src="Images/Dpctor-2.png"
+                                alt="Dr. Md. Asadullah-Al-Galib" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-dark mb-1">Dr. Md. Asadullah-Al-Galib</h3>
+                                <p class="text-primary font-semibold mb-3">Radiologist</p>
+                                <div class="flex items-center text-sm text-gray-600 mb-3">
+                                    <i class="fas fa-briefcase-medical mr-2"></i>
+                                    <span>12 years experience</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">Specialist in Diabetes, Rheumatic Diseases, and Medicine</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">MRI</span>
+                                    <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">CT
+                                        Scan</span>
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Ultrasound</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="contact.html"
+                                        class="bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded-full transition duration-300 text-sm">Book
+                                        Appointment</a>
+                                    <a href="tel:01310-368818" class="text-primary hover:text-secondary transition duration-300">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 2 -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                            data-translate="translateY(20px)">
+                            <img src="Images/Doctor-1.png"
+                                alt="Dr. Md Mehedi Hasan" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-dark mb-1">Dr. Md Mehedi Hasan</h3>
+                                <p class="text-primary font-semibold mb-3">Pathologist</p>
+                                <div class="flex items-center text-sm text-gray-600 mb-3">
+                                    <i class="fas fa-briefcase-medical mr-2"></i>
+                                    <span>15 years experience</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">Specialist in newborn, child and adolescent blood and cancer diseases.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Blood
+                                        Tests</span>
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Biopsy</span>
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Cytology</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="contact.html"
+                                        class="bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded-full transition duration-300 text-sm">Book
+                                        Appointment</a>
+                                    <a href="tel:+8801310-368818" class="text-primary hover:text-secondary transition duration-300">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 3 -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                            data-translate="translateY(20px)">
+                            <img src="Images/Doctor-3.png"
+                                alt="Dr. Sharmin Firoz" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-dark mb-1">Dr. Sharmin Firoz</h3>
+                                <p class="text-primary font-semibold mb-3">Cardiologist</p>
+                                <div class="flex items-center text-sm text-gray-600 mb-3">
+                                    <i class="fas fa-briefcase-medical mr-2"></i>
+                                    <span>18 years experience</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">Specialist in: Gynecology, Obstetrics, Infertility, Menstrual Disorders, and Diabetes</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">ECG</span>
+                                    <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Echo</span>
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Holter</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="contact.html"
+                                        class="bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded-full transition duration-300 text-sm">Book
+                                        Appointment</a>
+                                    <a href="tel:01310-636818" class="text-primary hover:text-secondary transition duration-300">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 4 -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                            data-translate="translateY(20px)">
+                            <img src="Images/Doctor-4.png"
+                                alt="Dr. Md. Hamid Ullah Bahar" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-dark mb-1">Dr. Md. Hamid Ullah Bahar</h3>
+                                <p class="text-primary font-semibold mb-3">Neurologist</p>
+                                <div class="flex items-center text-sm text-gray-600 mb-3">
+                                    <i class="fas fa-briefcase-medical mr-2"></i>
+                                    <span>10 years experience</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">Specialist in:Fractures, Joint Pain, Arthritis, Nerve, Spine, and Paralysis Diseases</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">EEG</span>
+                                    <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">EMG</span>
+                                    <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Nerve
+                                        Conduction</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="contact.html"
+                                        class="bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded-full transition duration-300 text-sm">Book
+                                        Appointment</a>
+                                    <a href="tel:01310-636818" class="text-primary hover:text-secondary transition duration-300">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 5 -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                            data-translate="translateY(20px)">
+                            <img src="Images/Doctor-5.png"
+                                alt="Dr. Mir Mahfuz Alam" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-dark mb-1">Dr. Mir Mahfuz Alam</h3>
+                                <p class="text-primary font-semibold mb-3">Sonologist</p>
+                                <div class="flex items-center text-sm text-gray-600 mb-3">
+                                    <i class="fas fa-briefcase-medical mr-2"></i>
+                                    <span>14 years experience</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">Specialist in Medicine & Cardiology</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Abdominal
+                                        USG</span>
+                                    <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Obstetric
+                                        USG</span>
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Doppler</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="contact.html"
+                                        class="bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded-full transition duration-300 text-sm">Book
+                                        Appointment</a>
+                                    <a href="tel:01310-361818," class="text-primary hover:text-secondary transition duration-300">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Doctor 6 -->
+                        <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 animate-on-scroll"
+                            data-translate="translateY(20px)">
+                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                alt="Dr. Lisa Kim" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-dark mb-1">Dr. Lisa Kim</h3>
+                                <p class="text-primary font-semibold mb-3">Microbiologist</p>
+                                <div class="flex items-center text-sm text-gray-600 mb-3">
+                                    <i class="fas fa-briefcase-medical mr-2"></i>
+                                    <span>9 years experience</span>
+                                </div>
+                                <p class="text-gray-600 mb-4">Expert in diagnosing infectious diseases through
+                                    microbial culture and molecular techniques.</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Culture</span>
+                                    <span
+                                        class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">Sensitivity</span>
+                                    <span class="bg-primary/10 text-primary text-xs px-3 py-1 rounded-full">PCR</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <a href="contact.html"
+                                        class="bg-primary hover:bg-secondary text-white font-bold py-2 px-6 rounded-full transition duration-300 text-sm">Book
+                                        Appointment</a>
+                                    <a href="#" class="text-primary hover:text-secondary transition duration-300">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Support Staff -->
+            <section class="py-16 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-12 animate-on-scroll" data-translate="translateY(20px)">
+                        <h2 class="text-3xl font-bold text-dark mb-4">Our Support Team</h2>
+                        <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                        <p class="max-w-3xl mx-auto">Dedicated professionals who ensure smooth operations and
+                            patient comfort.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                            data-translate="translateY(20px)">
+                            <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                    alt="Nurse" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-center font-bold text-dark mb-1">Sarah Williams</h3>
+                            <p class="text-center text-primary text-sm mb-3">Head Nurse</p>
+                            <p class="text-center text-gray-600 text-sm">Ensures patient comfort during procedures
+                                and sample collection.</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                            data-translate="translateY(20px)">
+                            <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+                                <img src="Images/lab-tecnician-smart-hospital.jpeg"
+                                    alt="Technician" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-center font-bold text-dark mb-1">ARIFUL ISLAM</h3>
+                            <p class="text-center text-primary text-sm mb-3">Lab Technician</p>
+                            <p class="text-center text-gray-600 text-sm">Processes samples and ensures accurate test
+                                results.</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                            data-translate="translateY(20px)">
+                            <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+                                <img src="Images/x-ray-expert-smart-hospital.jpeg"
+                                    alt="Radiographer" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-center font-bold text-dark mb-1">Md Nazrul Islam </h3>
+                            <p class="text-center text-primary text-sm mb-3">Radiographer</p>
+                            <p class="text-center text-gray-600 text-sm">Operates imaging equipment with precision
+                                and care.</p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 animate-on-scroll"
+                            data-translate="translateY(20px)">
+                            <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-4">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                                    alt="Receptionist" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="text-center font-bold text-dark mb-1">Jennifer Lee</h3>
+                            <p class="text-center text-primary text-sm mb-3">Patient Coordinator</p>
+                            <p class="text-center text-gray-600 text-sm">Assists with appointments and patient
+                                inquiries.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="py-16 bg-secondary text-white">
+                <div class="container mx-auto px-4 text-center animate-on-scroll" data-translate="translateY(20px)">
+                    <h2 class="text-3xl font-bold mb-6">Can't Find the Specialist You Need?</h2>
+                    <p class="text-xl mb-8 max-w-2xl mx-auto">We have a network of affiliated specialists. Contact
+                        us to connect with the right doctor for your needs.</p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-4">
+                        <a href="contact.html"
+                            class="bg-white hover:bg-gray-100 text-secondary font-bold py-3 px-8 rounded-full transition duration-300 inline-block">Contact
+                            Us</a>
+                        <a href="tel:+11234567890"
+                            class="border-2 border-white hover:bg-white hover:text-secondary font-bold py-3 px-8 rounded-full transition duration-300 inline-block">
+                            <i class="fas fa-phone-alt mr-2"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- About Column -->
+                    <div class="animate-on-scroll" data-translate="translateY(20px)">
+                        <h3 class="text-xl font-bold mb-4 text-primary">About Us</h3>
+                        <p class="mb-4">Smart Hospital & Diagnostic Center is committed to providing high-quality
+                            healthcare
+                            services with state-of-the-art technology and compassionate care.</p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white hover:text-accent transition duration-300"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Column -->
+                    <div class="animate-on-scroll" data-translate="translateY(20px)">
+                        <h3 class="text-xl font-bold mb-4 text-primary">Quick Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="hover:text-accent transition duration-300">Home</a></li>
+                            <li><a href="services.html" class="hover:text-accent transition duration-300">Services</a>
+                            </li>
+                            <li><a href="doctors.html" class="hover:text-accent transition duration-300">Doctors</a>
+                            </li>
+                            <li><a href="blogs.html" class="hover:text-accent transition duration-300">Blogs</a></li>
+                            <li><a href="about.html" class="hover:text-accent transition duration-300">About Us</a></li>
+                            <li><a href="contact.html" class="hover:text-accent transition duration-300">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Services Column -->
+                    <div class="animate-on-scroll" data-translate="translateY(20px)">
+                        <h3 class="text-xl font-bold mb-4 text-primary">Our Services</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-accent transition duration-300">Blood Tests</a></li>
+                            <li><a href="#" class="hover:text-accent transition duration-300">MRI Scan</a></li>
+                            <li><a href="#" class="hover:text-accent transition duration-300">X-Ray</a></li>
+                            <li><a href="#" class="hover:text-accent transition duration-300">Ultrasound</a></li>
+                            <li><a href="#" class="hover:text-accent transition duration-300">ECG</a></li>
+                            <li><a href="#" class="hover:text-accent transition duration-300">CT Scan</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Column -->
+                    <div class="animate-on-scroll" data-translate="translateY(20px)">
+                        <h3 class="text-xl font-bold mb-4 text-primary">Contact Us</h3>
+                        <address class="not-italic">
+                            <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-accent"></i>84V3+J9F, Shaheed Muktijoddha Road, Shyamnagar</p>
+                            <p class="mb-2"><i class="fas fa-phone-alt mr-2 text-accent"></i> +88 01815-505050</p>
+                            <p class="mb-2"><i class="fas fa-envelope mr-2 text-accent"></i> info@smarthospitalbd.com</p>
+                            <p><i class="fas fa-clock mr-2 text-accent"></i> Mon-Sun: 8:00 AM - 8:00 PM</p>
+                        </address>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-700 mt-8 pt-8 text-center animate-on-scroll"
+                    data-translate="translateY(20px)">
+                    <p>&copy; 2023 Smart Hospital & Diagnostic Center. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script>
+            // Mobile menu toggle
+            document.getElementById('mobile-menu-button').addEventListener('click', function () {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+
+            // Scroll animation
+            function animateOnScroll() {
+                const elements = document.querySelectorAll('.animate-on-scroll');
+
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (elementPosition < windowHeight - 100) {
+                        const translate = element.getAttribute('data-translate') || 'translateY(0)';
+                        element.style.transform = translate;
+                        element.classList.add('animated');
+                    }
+                });
+            }
+
+            // Initialize animations on load
+            window.addEventListener('load', animateOnScroll);
+            window.addEventListener('scroll', animateOnScroll);
+        </script>
+</body>
+
+</html>
